@@ -1,0 +1,49 @@
+$color_primary: coral;
+$color_second: rgb(99, 149, 204);
+$height_small: 100px;
+
+@mixin my-display-flex {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+
+.container {
+
+
+  font-size: 30px;
+  font-weight: 600;
+
+
+  header, footer {
+    @include my-display-flex;
+
+    height: $height_small;
+    background-color: $color_primary;
+    color: $color_second;
+  }
+
+  #main {
+    @include my-display-flex;
+
+    color: $color_primary;
+    height: calc(100vh - #{$height_small * 2});
+    background-color: $color_second;
+
+    & > div {
+      @include my-display-flex;
+      flex-basis: calc(90% / 3);
+      height: 80%;
+      background-color: $color_primary;
+      color: $color_second;
+      text-align: center;
+    }
+  }
+}

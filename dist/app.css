@@ -1,0 +1,36 @@
+body {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.container {
+  font-size: 30px;
+  font-weight: 600;
+}
+.container header, .container footer {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  height: 100px;
+  background-color: coral;
+  color: #6395cc;
+}
+.container #main {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  color: coral;
+  height: calc(100vh - 200px);
+  background-color: #6395cc;
+}
+.container #main > div {
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+  flex-basis: calc(90% / 3);
+  height: 80%;
+  background-color: coral;
+  color: #6395cc;
+  text-align: center;
+}
